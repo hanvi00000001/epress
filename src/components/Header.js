@@ -3,22 +3,24 @@ import React from 'react';
 import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import {colors, parameters} from '../global/styles';
 
-//import {Icon} from 'react-native-elements';
+import {Icon} from '@rneui/themed'; //cái này nè
 
-export default function Header(title) {
+export default function Header({title, type, navigation}) {
   return (
     <View style={styles.header}>
-      <View>
+      <View style={{marginLeft: 20}}>
         <Icon
           type="material-community"
-          name="arrow-left"
+          name={type}
           color={colors.headerText}
           size={28}
-          onPress={() => {}}
+          onPress={() => {
+            navigation.goBack();
+          }}
         />
-        <View>
-          <Text style={styles.headerText}>{title}</Text>
-        </View>
+      </View>
+      <View>
+        <Text style={styles.headerText}>{title}</Text>
       </View>
     </View>
   );
@@ -26,7 +28,7 @@ export default function Header(title) {
 
 const styles = StyleSheet.create({
   header: {
-    flexDirectin: 'row',
+    flexDirection: 'row',
     backgroundColor: colors.buttons,
     height: parameters.headerHeight,
   },
@@ -34,5 +36,6 @@ const styles = StyleSheet.create({
     color: colors.headerText,
     fontSize: 22,
     fontWeight: 'bold',
+    marginLeft: 30,
   },
 });

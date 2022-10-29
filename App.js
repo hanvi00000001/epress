@@ -1,14 +1,18 @@
 import React from 'react';
 
 import {View, Text, StyleSheet, StatusBar} from 'react-native';
-import Header from './src/components/Header';
 import {colors} from './src/global/styles';
+//import {AuthStack} from './src/navigation/authStack';
+import RootNavigator, {RootNavigators} from './src/navigation/RootNavigators';
+import SingInScreen from './src/screens/authScreens/SignInScreen';
+
+import HomeScreen from './src/screens/HomeScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Statusbar barStyle="light-content" backgroundColor={colors.statusbar} />
-      <Header title="Mu ACIIUH" />
+      <StatusBar barStyle="light-content" backgroundColor={colors.statusbar} />
+      <RootNavigator/>
     </View>
   );
 }
