@@ -4,23 +4,35 @@ import {View, Text, StyleSheet} from 'react-native';
 import {Icon, withBadge} from '@rneui/themed';
 import {colors, parameters} from '../global/styles';
 
-
-export default function HomeHeader() {
+export default function HomeHeader({navigation}) {
   const BadgeIcon = withBadge(0)(Icon);
 
   return (
     <View style={styles.header}>
-      <View style={{alignItems: 'center',justifyContent: 'center',marginLeft: 15,}}>
-        
+      <View
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginLeft: 15,
+        }}>
         <Icon
-          type="material-community-icons"
+          type="material"
           name="menu"
           color={colors.cardbackground}
           size={32}
+          onPress={() => {
+            //navigation.toggleDrawer;
+            navigation.dispatch(navigation.toggleDrawer());
+          }}
         />
       </View>
       <View style={{alignItems: 'center', justifyContent: 'center'}}>
-        <Text style={{color: colors.cardbackground,fontSize: 25,  fontWeight: 'bold', }}>
+        <Text
+          style={{
+            color: colors.cardbackground,
+            fontSize: 25,
+            fontWeight: 'bold',
+          }}>
           UAME
         </Text>
       </View>
@@ -32,8 +44,8 @@ export default function HomeHeader() {
           marginRight: 15,
         }}>
         <BadgeIcon
-          type="material-community"
-          name="cart"
+          type="material"
+          name="shopping-cart"
           size={35}
           color={colors.cardbackground}
         />

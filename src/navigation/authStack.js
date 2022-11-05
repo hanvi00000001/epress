@@ -8,6 +8,7 @@ import SingInScreen from '../screens/authScreens/SignInScreen';
 
 import HomeScreen from '../screens/HomeScreen';
 import RootClientTabs from './ClientTabs';
+import DrawerNavigator from './DrawerNavigator';
 
 const Auth = createStackNavigator();
 
@@ -22,7 +23,6 @@ export function AuthStack() {
           ...TransitionPresets.RevealFromBottomAndroid,
         }}
       />
-
       <Auth.Screen
         name="SignInScreen"
         component={SingInScreen}
@@ -33,13 +33,14 @@ export function AuthStack() {
       />
 
       <Auth.Screen
-        name="RootClientTabs"
-        component={RootClientTabs}
+        name="DrawerNavigator"
+        component={DrawerNavigator}
         options={{
           headerShown: false,
           ...TransitionPresets.RevealFromBottomAndroid,
         }}
       />
+
     </Auth.Navigator>
   );
 }

@@ -3,6 +3,7 @@ import React, {useState, useRef} from 'react';
 import {View, Text, StyleSheet, Dimensions, Image} from 'react-native';
 import {colors, parameters, title} from '../../global/styles';
 import * as Animatable from 'react-native-animatable';
+import SignInScreen from './SignInScreen';
 
 import Swiper from 'react-native-swiper';
 

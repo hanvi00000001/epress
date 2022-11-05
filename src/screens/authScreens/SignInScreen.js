@@ -3,6 +3,7 @@ import React, {useState, useRef} from 'react';
 import {View, Text, StyleSheet, Dimensions, TextInput} from 'react-native';
 import {colors, parameters, title} from '../../global/styles';
 import * as Animatable from 'react-native-animatable';
+import RootClientTabs from '../../navigation/ClientTabs';
 
 import {Icon, Button, SocialIcon} from '@rneui/themed';
 
@@ -78,7 +79,7 @@ export default function SingInScreen({navigation}) {
           buttonStyle={parameters.styledButton}
           titleStyle={parameters.buttonTitle}
           onPress={() => {
-            navigation.navigate('RootClientTabs');
+            navigation.navigate('DrawerNavigator');
           }}
         />
       </View>
