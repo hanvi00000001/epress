@@ -23,17 +23,21 @@ export default function SingInScreen({navigation}) {
   const textInput1 = useRef(1);
   const textInput2 = useRef(2);
 
-  async function signIn(data) {
-    try {
-      const {password, email} = data;
-      const user = await auth().signInWithEmailAndPassword(email, password);
-      if (user) {
-        console.log('USER SIGNED-IN');
-      }
-    } catch (error) {
-      Alert.alert(error.name, error.message);
-    }
+async function signIn(data){
+  try{
+  const {password,email} = data
+  const user=await auth().signInWithEmailAndPassword(email,password)
+  if(user){
+    console.log("USER SIGNED-IN")
   }
+}
+  catch(error){
+    Alert.alert(
+      error.name,
+      error.message
+    )
+  }
+}
 
   return (
     <View style={styles.container}>
@@ -52,7 +56,7 @@ export default function SingInScreen({navigation}) {
         initialValues={{email: '', password: ''}}
         onSubmit={values => {
           signIn(values);
-        }}>
+        }}>//
         {props => (
           <View>
             <View style={{marginTop: 20}}>
