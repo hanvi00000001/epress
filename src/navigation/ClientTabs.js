@@ -48,7 +48,12 @@ export default function RootClientTabs() {
           headerShown: false,
           tabBarLabel: 'My Purchases',
           tabBarIcon: ({color, size}) => (
-            <Icon name="view-list" type="material" color={color} size={size} />
+            <Icon
+              name="receipt-long"
+              type="material"
+              color={color}
+              size={size}
+            />
           ),
         }}
       />

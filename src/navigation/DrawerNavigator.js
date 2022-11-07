@@ -11,9 +11,7 @@ const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigator() {
   return (
-    <Drawer.Navigator
-          drawerContent={props => <DrawerContent {...props} />}
-        >
+    <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
       <Drawer.Screen
         name="RootClientTabs"
         component={RootClientTabs}

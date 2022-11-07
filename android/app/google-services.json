@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "687697900401",
+    "project_id": "uame-f0823",
+    "storage_bucket": "uame-f0823.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687697900401:android:61b081be5c96e8e8027cd0",
+        "android_client_info": {
+          "package_name": "com.epress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687697900401-q02gtuguqeg6tkhfhtih2ubj6vmsrp81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCoQBVYZQiaFOuTHD8zaoy_awubmtRoHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687697900401-q02gtuguqeg6tkhfhtih2ubj6vmsrp81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
